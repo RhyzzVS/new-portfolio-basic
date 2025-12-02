@@ -6,11 +6,27 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #2A51F7;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-theme {
+    --bg-color: #000833;
+    --text-color: #fff;
+    --primary-color: #2A51F7;
+}
 
 /* Header Section */
 header.header {
-    background: #000833;
-    padding: 2rem 15vw 2rem 15vw;
+    background: var(--bg-color);
+    padding: 1.5rem 15vw 1.5rem 15vw;
     position: fixed;
     z-index: 100;
     width: 100%;
@@ -23,7 +39,7 @@ nav.navbar {
 }
 
 .navbar h2.title {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.7rem;
 }
 
@@ -38,7 +54,7 @@ nav.navbar {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     transition: .3s;
 }
@@ -49,22 +65,28 @@ nav.navbar {
     gap: 12px;
 }
 
-.right-side .right-button {
-    max-width: 32px;
-    max-height: 32px;
+.right-button {
+    width: 24px;
+    height: 24px;
     background: none;
     border: none;
+    background-image: url(https://img.icons8.com/material-outlined/24/2a51f7/sun--v1.png);
+    background-size: cover;
+}
+
+body.dark-theme .right-button {
+    background: url(https://img.icons8.com/material-outlined/24/2a51f7/do-not-disturb-2.png);
 }
 
 .navbar a.contact {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     transition: .3s;
 }
 
 .navbar a:hover {
-    color: #2A51F7;
+    color: var(--primary-color);
 }
 
 /* ================================================= */
@@ -77,7 +99,7 @@ nav.navbar {
     align-items: center;
     justify-content: space-between;
     padding: 0 15vw 0 15vw;
-    background: #000833;
+    background: var(--bg-color);
 }
 
 .main-home .home-social {
@@ -89,7 +111,7 @@ nav.navbar {
 
 .main-home .home-class-1 {
     width: 40%;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .home-class-1 .title-home {
@@ -128,8 +150,8 @@ nav.navbar {
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 2px solid #2A51F7;
-    background: #2A51F7;
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
     border-radius: 8px;
     color: #000833;
     font-weight: 500;
@@ -142,7 +164,7 @@ nav.navbar {
 
 .contact-btn:hover {
     background: none;
-    color: #2A51F7;
+    color: var(--primary-color);
 }
 
 .img-switch {
@@ -176,9 +198,9 @@ nav.navbar {
     align-items: center;
     justify-content: center;
     background: none;
-    border: 2px solid #2A51F7;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
-    color: #2A51F7;
+    color: var(--primary-color);
     font-weight: 500;
     font-size: 1rem;
     padding: .8rem 1.5rem .8rem 1rem;
@@ -188,7 +210,7 @@ nav.navbar {
 }
 
 .cv-btn:hover {
-    background: #2A51F7;
+    background: var(--primary-color);
     color: #000833;
 }
 
@@ -217,4 +239,8 @@ nav.navbar {
 
 .cv-btn:hover .img-switch-2 img:first-child {
     opacity: 0;
+}
+
+.about-container {
+    height: 100vh;
 }
