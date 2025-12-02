@@ -6,9 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* Header Section */
 header.header {
-    background: #0A164D;
-    padding: .8rem 4rem .8rem 4rem;
+    background: #000833;
+    padding: 2rem 15vw 2rem 15vw;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 
 nav.navbar {
@@ -19,7 +24,7 @@ nav.navbar {
 
 .navbar h2.title {
     color: #fff;
-    font-size: 35px;
+    font-size: 1.7rem;
 }
 
 .navbar ul {
@@ -38,6 +43,19 @@ nav.navbar {
     transition: .3s;
 }
 
+.navbar .right-side {
+    margin-left: 4rem;
+    display: flex;
+    gap: 12px;
+}
+
+.right-side .right-button {
+    max-width: 32px;
+    max-height: 32px;
+    background: none;
+    border: none;
+}
+
 .navbar a.contact {
     text-decoration: none;
     color: #fff;
@@ -47,4 +65,156 @@ nav.navbar {
 
 .navbar a:hover {
     color: #2A51F7;
+}
+
+/* ================================================= */
+
+/* Main Section */
+
+.main-home{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15vw 0 15vw;
+    background: #000833;
+}
+
+.main-home .home-social {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.main-home .home-class-1 {
+    width: 40%;
+    color: #fff;
+}
+
+.home-class-1 .title-home {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.home-class-1 .subtitle-home {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.home-class-1 .home-information {
+    margin-bottom: 1.2rem;
+}
+
+.home-class-2 {
+    width: 15rem;
+    display: flex;
+    justify-content: right;
+    margin-left: 7vw;
+}
+
+.home-class-2 .profile-img {
+    width: 100%;
+    border-radius: 45px;
+}
+
+.home-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #2A51F7;
+    background: #2A51F7;
+    border-radius: 8px;
+    color: #000833;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .5rem 1.2rem;
+    transition: .3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-btn:hover {
+    background: none;
+    color: #2A51F7;
+}
+
+.img-switch {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.img-switch img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    transition: .3s ease;
+}
+
+.img-switch img:last-child {
+    opacity: 0;
+}
+
+.contact-btn:hover .img-switch img:first-child {
+    opacity: 0;
+}
+.contact-btn:hover .img-switch img:last-child {
+    opacity: 1;
+}
+
+.home-btn .cv-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 2px solid #2A51F7;
+    border-radius: 8px;
+    color: #2A51F7;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .8rem 1.5rem .8rem 1rem;
+    transition: .3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.cv-btn:hover {
+    background: #2A51F7;
+    color: #000833;
+}
+
+.img-switch-2 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.img-switch-2 img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    transition: .3s ease;
+}
+
+.img-switch-2 img:last-child {
+    opacity: 0;
+}
+
+.cv-btn:hover .img-switch-2 img:last-child {
+    opacity: 1;
+}
+
+.cv-btn:hover .img-switch-2 img:first-child {
+    opacity: 0;
 }
